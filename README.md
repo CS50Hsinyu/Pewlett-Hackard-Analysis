@@ -5,6 +5,7 @@ The project is to help Bobby, a HR analyst works in Pewlett Hackard, to build em
 
 ## Results
 * Deliverable 1: The Number of Retiring Employees by Title
+
  1. To create Retirement Titles table containing employee number, first name, last name, title, from date and to date, we have to join employees and title table by employee number and then filtering employees born during 1954 to 1955. However, some employees may have multiple titles because promotion records are kept in the database.
 
 ![Step1_7](Resources/Step1_7.PNG)
@@ -23,6 +24,16 @@ The project is to help Bobby, a HR analyst works in Pewlett Hackard, to build em
 
 
 * Deliverable 2: The Employees Eligible for the Mentorship Program
+
  1.
+
+ 2.
+
+ 3.
+
+ 4.
+
+![Deliverable_2](Resources/Deliverable_2.png)
+
 
 ## Summary
