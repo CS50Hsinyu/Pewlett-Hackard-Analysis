@@ -44,7 +44,6 @@ The project is to help Bobby, a HR analyst works in Pewlett Hackard, to build em
 
   Please see the second picture below. The result column below shows that the number of silver_tsunami, employees who are going to retire, is great than the number of mentees, employees who are eligible to participate Mentorship Program. This means there are enough qualified, retirement-ready employees in the departments to mentor the next generation of Pewlett Hackard employees.
   
-  
 ![mentee](Resources/mentee.png)
 
 
