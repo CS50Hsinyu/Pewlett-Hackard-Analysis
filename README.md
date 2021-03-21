@@ -6,21 +6,21 @@ The project is to help Bobby, a HR analyst works in Pewlett Hackard, to build em
 ## Results
 * Deliverable 1: The Number of Retiring Employees by Title
 
-  1. To create Retirement Titles table containing employee number, first name, last name, title, from date and to date, we use JOIN function with employees and title table on employee number and then filtering employees born during 1954 to 1955. However, some employees may have multiple titles because promotion records are kept in the database.
+ 1. To create Retirement Titles table containing employee number, first name, last name, title, from date and to date, we use JOIN function with employees and title table on employee number and then filtering employees born during 1954 to 1955. However, some employees may have multiple titles because promotion records are kept in the database.
 
 ![Step1_7](Resources/Step1_7.PNG)
 
-  2. On top of Retirement Titles table, we use DISTINCT function to remove duplicate rows and keep the latest job title in the list. Distinct function keeps only the first row of each set of rows so that we use ORDER BY on to_date in descending order to ensure that latest title appears the first row. In this way, Distinct function will delete history title and keep latest title information and then we can generate unique titles table which include only the most recent title information.
+ 2. On top of Retirement Titles table, we use DISTINCT function to remove duplicate rows and keep the latest job title in the list. Distinct function keeps only the first row of each set of rows so that we use ORDER BY on to_date in descending order to ensure that latest title appears the first row. In this way, Distinct function will delete history title and keep latest title information and then we can generate unique titles table which include only the most recent title information.
 
 ![Step8_14](Resources/Step8_14.PNG)
 
-  3. To calculate the number of employees who are about to retire and summarize by title, we use COUNT and GROUP BY function to count the number of employees by their most recent job title group. Then use ORDER BY function to present count number in descending order.
+ 3. To calculate the number of employees who are about to retire and summarize by title, we use COUNT and GROUP BY function to count the number of employees by their most recent job title group. Then use ORDER BY function to present count number in descending order.
 
 ![Step15_20](Resources/Step15_20.PNG)
 
 * Deliverable 2: The Employees Eligible for the Mentorship Program
 
-  4. We use JOIN function with employees, dept_emp and title table on emp_no to include emp_no, first_name, last_name, birth_date, from_date, to_date, and title information into Mentorship-eligibility table. To filter out the current employees born in 1965, we have to apply “WHERE (ee.birth_date BETWEEN '1965-01-01' AND '1965-12-31') AND dm.to_date='9999-01-01'.” Then, since there may have multiple records for one because promotion records are kept in the database, we have to sort to_date in descending order in titles and emp_dept tables to make sure the latest data will be the first row of each employee rows.
+ 4. We use JOIN function with employees, dept_emp and title table on emp_no to include emp_no, first_name, last_name, birth_date, from_date, to_date, and title information into Mentorship-eligibility table. To filter out the current employees born in 1965, we have to apply “WHERE (ee.birth_date BETWEEN '1965-01-01' AND '1965-12-31') AND dm.to_date='9999-01-01'.” Then, since there may have multiple records for one because promotion records are kept in the database, we have to sort to_date in descending order in titles and emp_dept tables to make sure the latest data will be the first row of each employee rows.
 
 ![Deliverable_2](Resources/Deliverable_2.png)
 
@@ -37,7 +37,9 @@ Please see picture below. It is code of silver_tsunami_summary and partial summa
 
 ![tsunami](Resources/silver_tsunami.png)
 
+
 * Are there enough qualified, retirement-ready employees in the departments to mentor the next generation of Pewlett Hackard employees?
+
 
 
 
