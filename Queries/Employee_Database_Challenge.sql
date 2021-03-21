@@ -71,7 +71,7 @@ AND dm.to_date='9999-01-01'
 ORDER BY ee.emp_no, t.to_date DESC, dm.to_date DESC;
 
 --Deliverable 3 :
---How many roles will need to be filled as the "silver tsunami" begins to make an impact?
+--How many roles will need to be filled as the "silver tsunami" begins to make an impact? total 72,458 employees are going to retire.
 --JOIN unique_title and dept_emp ON emp_no, and to_date. Then JOIN departments ON dept_no. 
 --Count the number of emp_no.
 --only employee who will retire (ie to_date is 9999-01-01, they are working for company now), No need to filter birthday since it is done in unique_titles
@@ -90,7 +90,10 @@ WHERE u.to_date = '9999-01-01'
 GROUP BY d.dept_name, u.title
 ORDER BY silver_tsunami DESC
 
+
+
 --Are there enough qualified, retirement-ready employees in the departments to mentor the next generation of Pewlett Hackard employees
+--totle 1549 employee is eigible
 --JOIN mentorship_eligibility and dept_emp on emp_no, and to_date. Then JOIN departments ON dept_no. 
 --Count emp_no from of emp_no.
 --Group by dept_name and title so that we can know the count number in which title in which department
@@ -106,3 +109,14 @@ JOIN departments as d
 ON de.dept_no = d.dept_no
 GROUP BY d.dept_name, me.title
 ORDER BY mentee DESC
+
+
+
+--Check if the number of silver_tsunami (employees who are going to retire) is greater than 
+--the number of mentee (employees who are eligible to participate Mentorship Program)
+--There are enough qualified, retirement-ready employees in the departments to mentor the next generation of Pewlett Hackard employees.
+SELECT * , (ss.silver_tsunami-m.mentee) AS result
+FROM mentee AS m
+JOIN silver_tsunami_summary AS ss
+ON m.dept_name=ss.dept_name AND m.title=ss.title 
+ORDER BY result ASC
