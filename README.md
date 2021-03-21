@@ -47,3 +47,9 @@ As mentorship_eligibility table made in Deliverable 2 provided the list of emplo
 Please see picture below. It is code of mentee and partial summary. From the table, we can know what role in what department will be eligible to mentorship program. The first is 244 Senior Engineer in Development department, the second is 207 Senior Engineer in Production department, and the third is 187 Senior Staff in Sales. Comparing with the number in silver_tsunami_summary, we have enough mentors to coach mentees.
 
 ![mentee](Resources/mentee.png)
+
+
+The result column below shows that the number of silver_tsunami, employees who are going to retire, is great than the number of mentees, employees who are eligible to participate Mentorship Program  means there are enough qualified, retirement-ready employees in the departments to mentor the next generation of Pewlett Hackard employees.
+
+![Deliverable_3.png](Resources/Deliverable_3.png)
+
