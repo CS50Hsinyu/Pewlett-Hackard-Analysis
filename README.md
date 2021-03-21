@@ -8,7 +8,7 @@ The project is to help Bobby, a HR analyst works in Pewlett Hackard, to build em
 
  1. To create Retirement Titles table containing employee number, first name, last name, title, from date and to date, we use JOIN function with employees and title table on employee number and then filtering employees born during 1954 to 1955. However, some employees may have multiple titles because promotion records are kept in the database.
 
-![Step1_7](Resources/Step1_7.PNG)
+![Step1_7](Resources/Step1_7.PNG){: .align-center}
 
  2. On top of Retirement Titles table, we use DISTINCT function to remove duplicate rows and keep the latest job title in the list. Distinct function keeps only the first row of each set of rows so that we use ORDER BY on to_date in descending order to ensure that latest title appears the first row. In this way, Distinct function will delete history title and keep latest title information and then we can generate unique titles table which include only the most recent title information.
 
